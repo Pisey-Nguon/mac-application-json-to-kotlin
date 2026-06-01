@@ -598,7 +598,7 @@ private func isIdField(_ name: String) -> Bool {
 private func isAmountOrPercentageField(_ name: String) -> Bool {
     let n = name.trimmingCharacters(in: .whitespacesAndNewlines).lowercased()
     guard !n.isEmpty else { return false }
-    return n.contains("amount") || n.contains("percentage") || n.contains("percent")
+    return n.contains("amount") || n.contains("percentage") || n.contains("percent") || n.contains("total") || n.contains("fee")
 }
 
 private func applyFieldTypeOverride(fieldName: String, spec: TypeSpec) -> TypeSpec {
